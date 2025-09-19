@@ -8,6 +8,11 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Suisse Intl", "ui-sans-serif", "system-ui", "sans-serif"],
+        serif: ["Nanum Myeongjo", "Garamond", "EB Garamond", "Times New Roman"],
+        mono: ["Suisse Intl Mono", "ui-monospace", "SFMono-Regular", "Menlo"],
+      },
       container: {
         screens: {
           sm: "100%",
