@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /* Custom font families */
+    --font-sans: "Suisse Intl", ui-sans-serif, system-ui, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+      "Noto Color Emoji";
+    --font-serif: "Nanum Myeongjo", "Garamond", "EB Garamond", "Times New Roman",
+      "Times", ui-serif, Georgia, Cambria, serif;
+    --font-mono: "Suisse Intl Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+      Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  /* Apply fonts to base elements */
+  html {
+    font-family: var(--font-sans);
+  }
+
+  /* You can also set specific elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+  }
+
+  code,
+  pre {
+    font-family: var(--font-mono);
+  }
+}

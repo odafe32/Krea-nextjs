@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { IoSunny } from "react-icons/io5";
 import { FaMoon } from "react-icons/fa";
+import { MoonIcon } from "./Icons";
 
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
@@ -13,22 +14,23 @@ export default function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <div className="w-10 h-10 rounded-lg bg-gray-200 dark:bg-gray-800 animate-pulse" />
+      <div className="w-12 h-12 rounded-lg bg-gray-200 dark:bg-gray-800 animate-pulse" />
     );
   }
 
   return (
     <div
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="relative inline-flex items-center justify-center cursor-pointer w-13 h-13 rounded-lg border-none bg-white dark:bg-black  hover:bg-gray-50"
+      className="relative inline-flex items-center justify-center cursor-pointer bg-[#f5f5f5] dark:bg-[#202020] rounded-[13px] px-2 py-2 hover:bg-gray-50"
       aria-label="Toggle theme"
     >
       <div className="relative">
         {theme === "dark" ? (
-          <FaMoon className="w-5 h-5 transition-all" />
+          <MoonIcon />
         ) : (
-          <IoSunny className="w-8 h-8 transition-all" />
+          <IoSunny className="w-5 h-5 text-black" />
         )}
+        {/* logo */}
       </div>
     </div>
   );
